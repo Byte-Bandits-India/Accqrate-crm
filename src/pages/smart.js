@@ -136,18 +136,18 @@ export default function Smart() {
 
   return (
     <>
-      <h1 className="text-center text-fluid-h2 leading-tight max-w-[360px] sm:max-w-[800px] mx-auto tracking--5 font-semibold  mt-48px md:mt-[56px] lg:mt-[80px] px-24px md:px-[32px]">
-        A Smart, Scalable Solution for{" "}
-        <span className="text-[#7B1FA2]"> Every Sales Team </span>
-      </h1>
-      <p className="text-center text-fluid-caption mt-16px mt-48px md:mt-[32px] lg:mt-[40px] px-24px md:px-[32px] font-light tracking--2  text-black  ">
-        Get up and running in minutes, not days. Accqrate Retail’s cloud-native
-        architecture means you can onboard each outlet effortlessly—no dedicated
-        POS hardware, no complex installations.
-      </p>
+      <div className=" w-full max-w-[1280px] mx-auto">
+        <h1 className="text-center text-fluid-h2 leading-tight tracking--5 font-semibold  mt-48px md:mt-[56px] lg:mt-[80px] px-24px md:px-[32px]">
+          A Smart, Scalable Solution for{" "}
+          <span className="text-[#7B1FA2]"> Every Sales Team </span>
+        </h1>
+        <p className="text-center text-fluid-caption mt-16px mt-48px md:mt-[24px] px-24px md:px-[32px] font-light tracking--2  text-black  ">
+          Every sales team faces common obstacles: 
+        </p>
+      </div>
       <section id="transformSection" className={sectionPadding}>
         {/* Grid Layout: 1 col mobile, 2 col tablet, 4 col desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[24px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[13px]">
           {cards.map((card, idx) => (
             <AccordionCard
               key={idx}
@@ -173,7 +173,7 @@ export default function Smart() {
           animate={isVisible ? "visible" : "hidden"}
         >
           <div className="text-center tracking--2">
-            <p className="font-light leading-snug  md:max-w-2xl text-fluid-caption md:text-fluid-body lg:text-fluid-h3 ">
+            <p className="font-light leading-snug  md:max-w-6xl text-fluid-caption md:text-fluid-body lg:text-fluid-h3 ">
               Accqrate CRM was meticulously designed to solve these problems.
               With its intelligent workflows, deep data insights, and seamless
               integrations, it enables your team to focus on building

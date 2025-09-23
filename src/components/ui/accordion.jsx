@@ -61,7 +61,7 @@ export default function AccordionCard({ title, desc, video, isOpen, onToggle }) 
         isDesktop
           ? isOpen
             ? "bg-[#7B1FA2] text-white"
-            : "bg-[#6666669C] text-white hover:bg-[#7B1FA2]"
+            : "bg-[#7B1FA2] text-white hover:bg-[#7B1FA2]"
           : "bg-[#7B1FA2] text-white"
       )}
       onMouseEnter={() => isDesktop && onToggle(true)}

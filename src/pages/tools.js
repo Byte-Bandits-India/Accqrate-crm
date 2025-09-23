@@ -110,7 +110,11 @@ export default function Tools() {
           Actionable Insights at{" "}
           <span className="text-[#7B1FA2] font-medium">Your Fingertips</span>
         </h2>
-        <p className="text-center text-[#000000B2] tracking--2 text-fluid-caption max-w-lg leading-tight mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px]">
+        <p
+          className="text-center text-[#000000B2] tracking--2 text-fluid-caption 
+  max-w-lg leading-tight mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px] 
+  md:max-w-[600px] lg:max-w-[800px]"
+        >
           With Accqrate CRM, you gain real-time insights into your sales
           pipeline and lead conversion metrics, allowing you to make informed
           decisions and optimize your strategy quickly.

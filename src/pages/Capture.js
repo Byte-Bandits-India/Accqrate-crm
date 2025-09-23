@@ -134,7 +134,7 @@ export default function Capture() {
           Capture, Track, and{" "}
           <span className="text-[#7B1FA2]"> Convert Leads </span>
         </h1>
-        <p className="text-center text-gray-500 text-fluid-caption mt-16px px-24px font-light tracking--2">
+        <p className="text-center text-gray-500 text-fluid-caption md:max-w-[1062px] mx-auto mt-16px px-24px font-light tracking--2">
           Accqrate CRM ensures you never lose a lead again. From the moment they
           enter your system to the moment they convert, Accqrate CRM tracks and
           nurtures leads seamlessly, so your team can focus on closing sales
@@ -214,7 +214,7 @@ export default function Capture() {
           <h2 className="text-fluid-h2 font-medium tracking--5 leading-tight ">
             Automate Your <span className="text-[#7B1FA2]">Sales Pipeline</span>
           </h2>
-          <p className="text-fluid-caption text-[#737373] mt-16px md:mt-[24px] lg:mt-[32px] tracking--2 max-w-4xl mx-auto">
+          <p className="text-fluid-caption text-[#737373] mt-16px md:mt-[24px] lg:mt-[32px] md:max-w-[1062px] tracking--2 max-w-4xl mx-auto">
             Stop wasting time on manual tasks. Accqrate CRM automates everything
             from lead capture to conversion, giving your sales team more time to
             do what they do best close deals.

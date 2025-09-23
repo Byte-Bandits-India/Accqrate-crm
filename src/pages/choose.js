@@ -87,19 +87,19 @@ export default function Choose() {
     <>
       <motion.section
         id="chooseSection"
-        className="bg-[#F2F2F2] text-center font-sans min-h-full m-0 mt-48px md:mt-[56px] md:px-[32px] px-24px"
+        className="bg-[#F2F2F2] text-center font-sans min-h-full m-0 mt-48px md:mt-[56px] md:px-[32px] py-[24px] md:py-[32px] px-24px"
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
         <motion.h2
-          className="text-fluid-h2 font-semibold py-8 tracking--5"
+          className="text-fluid-h2 font-semibold pb-6 md:pb-8 tracking--5"
           variants={fadeInLeft}
         >
           Why Choose <span className="text-[#7B1FA2]">Accqrate Retail?</span>
         </motion.h2>
 
         <motion.div
-          className="flex flex-col gap-12 items-center md:flex-row md:justify-center md:items-start"
+          className="flex flex-col gap-12 items-center md:flex-row md:justify-center md:items-center"
           variants={fadeInLeft}
           transition={{ delay: 0.2 }}
         >
@@ -109,7 +109,7 @@ export default function Choose() {
               alt="Why Choose Accqrate Retail"
               width={700}
               height={300}
-              className="w-full h-auto md:h-[450px] block"
+              className="w-full h-auto md:h-[450px] lg:h-[350px] block"
               loading="lazy"
             />
             <Image
@@ -123,12 +123,12 @@ export default function Choose() {
           </div>
 
           <div className="max-w-[600px] text-left md:max-w-[500px]">
-            <p className="text-black font-light  text-fluid-h3 leading-tight">
+            <p className="text-black font-light  text-fluid-h3 leading-tight lg:hidden">
               <span className="font-semibold tracking--2">
                 Compliance by design:
               </span>
             </p>
-            <p className="text-fluid-caption tracking--2 mt-12px">
+            <p className="text-fluid-caption tracking--2 mt-12px lg:hidden">
               {" "}
               Stay ready for every regulation no last-minute changes.
             </p>
