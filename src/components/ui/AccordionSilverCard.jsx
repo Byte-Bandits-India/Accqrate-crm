@@ -13,8 +13,8 @@ export default function AccordionCard({ value, icon, title, children }) {
         >
             <AccordionTrigger className="flex justify-between items-start w-full hover:no-underline">
                 <div className="flex flex-col items-start gap-[24px]">
-                    <img src={icon} alt={title} className="w-[45px] h-[45px]" />
-                    <span className="text-black text-fluid-h3 text-left font-normal">
+                    <img src={icon} alt={title} className="w-[45px] h-[45px] md:h-[34.56px] md:w-[31.75px] " />
+                    <span className="text-black text-fluid-body text-left font-normal">
                         {title}
                     </span>
                 </div>

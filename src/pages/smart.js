@@ -24,7 +24,8 @@ export default function Smart() {
     return () => element && observer.unobserve(element);
   }, []);
 
-  const sectionPadding = "mt-24px px-24px max-w-[1200px] mx-auto";
+  const sectionPadding =
+    "mt-24px px-24px md:px-[32px] md:mt-[32px] lg:mt-[40px] max-w-[1200px] mx-auto";
 
   if (loading || !isVisible) {
     return (
@@ -111,40 +112,35 @@ export default function Smart() {
   };
 
   const cards = [
-  {
-    title: "Disjointed communication",
-    desc: "Works instantly on Android, iOS, Windows, and Mac",
-    video: "/videos/card1.mp4",
-    bgColor: "bg-[#7B1FA2]",
-  },
-  {
-    title: "Lost leads",
-    desc: "Cloud-based and ready to use — no installations or IT assistance needed.",
-    video: "/videos/card2.mp4",
-    bgColor: "bg-[#7B1FA2]",
-  },
-  {
-    title: "Inconsistent data",
-    desc: "No drivers, no manual setup—automatic detection and configuration",
-    video: "/videos/card3.mp4",
-    bgColor: "bg-[#7B1FA2]",
-  },
-  {
-    title: "Inefficiency",
-    desc: "Receipts print, cut and display for customers instantly.",
-    video: "/videos/card4.mp4",
-    bgColor: "bg-[#7B1FA2]",
-  },
-]
-
+    {
+      title: "Disjointed communication",
+      desc: "Works instantly on Android, iOS, Windows, and Mac",
+      video: "/videos/card1.mp4",
+    },
+    {
+      title: "Lost leads",
+      desc: "Cloud-based and ready to use — no installations or IT assistance needed.",
+      video: "/videos/card2.mp4",
+    },
+    {
+      title: "Inconsistent data",
+      desc: "No drivers, no manual setup—automatic detection and configuration",
+      video: "/videos/card3.mp4",
+    },
+    {
+      title: "Inefficiency",
+      desc: "Receipts print, cut and display for customers instantly.",
+      video: "/videos/card4.mp4",
+    },
+  ];
 
   return (
     <>
-      <h1 className="text-center text-fluid-h2 leading-tight max-w-[360px] sm:max-w-[800px] mx-auto tracking--5 font-semibold  mt-48px px-24px">
+      <h1 className="text-center text-fluid-h2 leading-tight max-w-[360px] sm:max-w-[800px] mx-auto tracking--5 font-semibold  mt-48px md:mt-[56px] lg:mt-[80px] px-24px md:px-[32px]">
         A Smart, Scalable Solution for{" "}
-        <span className="text-[#7B1FA2]"> Every Sales Team </span> 
+        <span className="text-[#7B1FA2]"> Every Sales Team </span>
       </h1>
-      <p className="text-center text-fluid-caption mt-16px px-24px font-light tracking--2  text-black  ">
+      <p className="text-center text-fluid-caption mt-16px mt-48px md:mt-[32px] lg:mt-[40px] px-24px md:px-[32px] font-light tracking--2  text-black  ">
         Get up and running in minutes, not days. Accqrate Retail’s cloud-native
         architecture means you can onboard each outlet effortlessly—no dedicated
         POS hardware, no complex installations.
@@ -168,7 +164,7 @@ export default function Smart() {
       {/* Owner Section */}
       <section
         id="ownerSection"
-        className=" w-full max-w-[1280px]  mx-auto flex items-center justify-center mt-24px rounded-lg px-24px  "
+        className=" w-full max-w-[1280px]  mx-auto flex items-center justify-center mt-24px rounded-lg px-24px md:px-8 lg:px-10 mt-24px md:mt-[32px] lg:mt-[40px] "
       >
         <motion.div
           className="flex items-center justify-center"
@@ -176,11 +172,13 @@ export default function Smart() {
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
         >
-          <div className=" md:px-6 text-center tracking--2">
+          <div className="text-center tracking--2">
             <p className="font-light leading-snug  md:max-w-2xl text-fluid-caption md:text-fluid-body lg:text-fluid-h3 ">
-             Accqrate CRM was meticulously designed to solve these problems. With its intelligent workflows, deep data insights, and seamless integrations, it enables your team to focus on building relationships and closing deals, not on administrative tasks.
+              Accqrate CRM was meticulously designed to solve these problems.
+              With its intelligent workflows, deep data insights, and seamless
+              integrations, it enables your team to focus on building
+              relationships and closing deals, not on administrative tasks.
             </p>
-           
           </div>
         </motion.div>
       </section>

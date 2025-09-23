@@ -17,34 +17,47 @@ export default function Crack() {
 
   const videoCards = [
     { title: "Barcode Scanning", src: "/videos/barcode.mp4", width: 500 },
-    { title: "Flexible Payments", src: "/videos/Flexible Payments.mp4", width: 450 },
-    { title: "Product Search by Attributes", src: "/videos/productsearch.mp4", width: 550 },
+    {
+      title: "Flexible Payments",
+      src: "/videos/Flexible Payments.mp4",
+      width: 450,
+    },
+    {
+      title: "Product Search by Attributes",
+      src: "/videos/productsearch.mp4",
+      width: 550,
+    },
   ];
 
   return (
-    <section className="bg-white text-center px-24px mt-24px">
-      <h2 className="text-fluid-h2 max-w-[300px] sm:max-w-[800px] mx-auto font-medium tracking--5  text-black">
-        Crack and  <span className="text-[#7B1FA2]">Track Proposals</span> with Ease
+    <section className="bg-white text-center px-24px md:px-[32px] mt-48px md:mt-[56px] lg:mt-[80px] ">
+      <h2 className="text-fluid-h2 max-w-[300px] sm:max-w-[800px] mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px] font-medium tracking--5  text-black">
+        Crack and <span className="text-[#7B1FA2]">Track Proposals</span> with
+        Ease
       </h2>
-      <p className="text-[#000000B2] leading-snug mt-12px text-fluid-caption tracking--2 max-w-2xl mx-auto ">
-       Managing proposals, quotes, and related documents can be time-consuming and prone to errors. Accqrate CRM simplifies proposal management with features that streamline creation, tracking, and submission.
+      <p className="text-[#000000B2] leading-snug mb-[24px] md:mb-[32px] lg:mb-[40px] text-fluid-caption tracking--2 max-w-2xl mx-auto ">
+        Managing proposals, quotes, and related documents can be time-consuming
+        and prone to errors. Accqrate CRM simplifies proposal management with
+        features that streamline creation, tracking, and submission.
       </p>
 
       <div className="flex flex-col items-center relative mt-24px">
         {/* Marquee Card */}
-        <div
-          className="sticky h-[240px] md:h-[300px] bg-white border border-gray-400 rounded-2xl shadow-xl p-4 max-w-4xl w-full z-10"
-          
-        >
+        <div className="sticky h-[240px] md:h-[300px] bg-white border border-gray-400 rounded-2xl shadow-xl p-4 max-w-4xl w-full z-10">
           <div className="text-fluid-h3 leading-tight font-bold text-pink-700 text-center mb-5">
             10+ Promotions & Discount Engines
           </div>
           <div className="overflow-hidden w-full">
             <div className="flex gap-10 animate-marquee py-8">
               {images.concat(images).map((img, idx) => (
-                <div key={idx} className="flex flex-col items-center min-w-[80px] gap-2">
+                <div
+                  key={idx}
+                  className="flex flex-col items-center min-w-[80px] gap-2"
+                >
                   <Image src={img.src} width={50} height={80} alt={img.label} />
-                  <span className="text-sm font-bold text-gray-600">{img.label}</span>
+                  <span className="text-sm font-bold text-gray-600">
+                    {img.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -60,7 +73,9 @@ export default function Crack() {
               zIndex: 20 + idx, // progressive stacking
             }}
           >
-            <div className="text-fluid-h3 font-bold text-[#C2185B] text-center mb-5">{card.title}</div>
+            <div className="text-fluid-h3 font-bold text-[#C2185B] text-center mb-5">
+              {card.title}
+            </div>
             <video
               src={card.src}
               muted
@@ -76,8 +91,12 @@ export default function Crack() {
       {/* Marquee animation */}
       <style jsx>{`
         @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
         }
         .animate-marquee {
           display: flex;

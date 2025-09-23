@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ButtonGroup({ buttons = [], className = "" }) {
     return (
         <div
-            className={`my-8 md:mt-12 flex flex-col md:flex-row gap-[12px] md:text-lg ${className}`}
+            className={`my-8 md:my-[40px] lg:mt-[60px] flex flex-col md:flex-row gap-[12px] md:text-lg ${className}`}
         >
             {buttons.map((btn, index) => (
                 <Link

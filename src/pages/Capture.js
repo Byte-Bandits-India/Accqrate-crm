@@ -126,13 +126,19 @@ export default function Capture() {
   return (
     <>
       {/* Pos Section */}
-      <section id="posSection" className=" px-24px rounded-xl  mt-48px">
+      <section
+        id="posSection"
+        className=" px-24px md:px-[32px] rounded-xl  mt-48px md:mt-[56px] lg:mt-[80px]"
+      >
         <h1 className="text-center text-fluid-h2 leading-tight max-w-[340px] sm:max-w-[800px] mx-auto tracking--5 font-semibold  mt-48px px-24px">
           Capture, Track, and{" "}
           <span className="text-[#7B1FA2]"> Convert Leads </span>
         </h1>
-        <p className="text-center text-gray-500 text-fluid-caption mt-16px px-24px font-light tracking--2 text-black">
-          Accqrate CRM ensures you never lose a lead again. From the moment they enter your system to the moment they convert, Accqrate CRM tracks and nurtures leads seamlessly, so your team can focus on closing sales rather than tracking down prospects.
+        <p className="text-center text-gray-500 text-fluid-caption mt-16px px-24px font-light tracking--2">
+          Accqrate CRM ensures you never lose a lead again. From the moment they
+          enter your system to the moment they convert, Accqrate CRM tracks and
+          nurtures leads seamlessly, so your team can focus on closing sales
+          rather than tracking down prospects.
         </p>
         <motion.div
           variants={variant}
@@ -147,7 +153,7 @@ export default function Capture() {
               autoPlay
               loop
               playsInline
-              className="w-full h-auto object-contain rounded-lg mt-24px"
+              className="w-full h-auto object-contain rounded-lg mt-24px md:mt-[32px] lg:mt-[40px]"
             />
           </div>
           <Accordion
@@ -155,7 +161,7 @@ export default function Capture() {
             collapsible
             className="flex flex-col gap-[24px]
     sm:grid sm:grid-cols-2
-    md:grid md:grid-cols-3 md:max-w-5xl mx-auto  mt-24px"
+    md:grid md:grid-cols-3 md:max-w-5xl mx-auto  mt-24px md:mt-[32px] lg:mt-[40px]"
           >
             {/* Card 1 */}
             <AccordionCard
@@ -164,8 +170,8 @@ export default function Capture() {
               title="Instant Lead Capture"
             >
               <>
-                Extra details about <b>Instant Lead Capture</b> will appear here when
-                expanded.
+                Extra details about <b>Instant Lead Capture</b> will appear here
+                when expanded.
               </>
             </AccordionCard>
 
@@ -198,7 +204,7 @@ export default function Capture() {
       {/* Erp Section */}
       <section
         id="erpSection"
-        className="px-24px max-w-[1200px] mx-auto text-center mt-48px"
+        className="px-24px md:px-[32px] max-w-[1200px] mx-auto text-center mt-48px md:mt-[56px] lg:mt-[80px]"
       >
         <motion.div
           variants={containerVariant}
@@ -206,10 +212,12 @@ export default function Capture() {
           animate={isVisible ? "visible" : "hidden"}
         >
           <h2 className="text-fluid-h2 font-medium tracking--5 leading-tight ">
-           Automate Your <span className="text-[#7B1FA2]">Sales Pipeline</span>
+            Automate Your <span className="text-[#7B1FA2]">Sales Pipeline</span>
           </h2>
-          <p className="text-fluid-caption text-[#737373] mt-16px tracking--2 max-w-4xl mx-auto">
-           Stop wasting time on manual tasks. Accqrate CRM automates everything from lead capture to conversion, giving your sales team more time to do what they do best close deals.
+          <p className="text-fluid-caption text-[#737373] mt-16px md:mt-[24px] lg:mt-[32px] tracking--2 max-w-4xl mx-auto">
+            Stop wasting time on manual tasks. Accqrate CRM automates everything
+            from lead capture to conversion, giving your sales team more time to
+            do what they do best close deals.
           </p>
 
           {[
@@ -231,7 +239,7 @@ export default function Capture() {
           ].map((feature, i) => (
             <motion.div
               key={i}
-              className="flex flex-col  lg:flex-row lg:items-start  justify-between gap-10 mt-24px"
+              className="flex flex-col  lg:flex-row lg:items-start  justify-between gap-10 mt-24px md:mt-[32px] lg:mt-[40px]"
               initial={{ x: 100, opacity: 0 }}
               animate={isVisible ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: i * 0.2 }}
@@ -239,8 +247,13 @@ export default function Capture() {
               <p className="md:block hidden flex-1 text-left leading-snug text-fluid-h3 text-[#7B1FA2] font-light max-w-lg">
                 {feature.text} {feature.desc}
               </p>
-              <p className="md:hidden text-left tracking--2  leading-snug text-fluid-h3 text-[#7B1FA2] font-light">{feature.text} <br/><span className="text-gray-700 text-fluid-caption ">{feature.desc}</span></p>
-              
+              <p className="md:hidden text-left tracking--2  leading-snug text-fluid-h3 text-[#7B1FA2] font-light">
+                {feature.text} <br />
+                <span className="text-gray-700 text-fluid-caption ">
+                  {feature.desc}
+                </span>
+              </p>
+
               <div className="flex-1 flex justify-center">
                 <video
                   src={feature.video}
