@@ -116,7 +116,7 @@ export default function Accqrate() {
       </section>
 
       {/* Dashboard Section */}
-      <section className="w-full flex items-center justify-center mt-32px box-border px-24px md:px-[32px] lg:mt-[40px]">
+      <section className="w-full flex items-center justify-center box-border px-24px md:px-[32px]">
         <div className="relative w-full max-w-[1200px] overflow-visible">
           <video
             src="/videos/accqratedashboard.mp4"
