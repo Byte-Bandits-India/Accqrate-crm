@@ -3,6 +3,9 @@ import Skeleton from "../components/skeleton";
 import { LoadingContext } from "../utils/LoadingContext";
 import { motion } from "framer-motion";
 
+// ScrollReveal component to handle scroll-triggered animations
+import ScrollReveal from "../components/ui/ScrollReveal";
+
 export default function Tools() {
   const { loading } = useContext(LoadingContext);
   const [isVisible, setIsVisible] = useState(false);
@@ -106,19 +109,19 @@ export default function Tools() {
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
-        <h2 className="text-center text-fluid-h2 font-medium tracking--5 mb-[24px] md:mb-[32px] lg:mb-[40px]">
+        <ScrollReveal as="h2" containerClassName="text-center text-fluid-h2 font-medium tracking--5 mb-[24px] md:mb-[32px] lg:mb-[40px]">
           Actionable Insights at{" "}
           <span className="text-[#7B1FA2] font-medium">Your Fingertips</span>
-        </h2>
-        <p
-          className="text-center text-[#000000B2] tracking--2 text-fluid-caption 
+        </ScrollReveal>
+        <ScrollReveal as="p"
+          containerClassName="text-center text-[#000000B2] tracking--2 text-fluid-caption 
   max-w-lg leading-tight mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px] 
   md:max-w-[600px] lg:max-w-[800px]"
         >
           With Accqrate CRM, you gain real-time insights into your sales
           pipeline and lead conversion metrics, allowing you to make informed
           decisions and optimize your strategy quickly.
-        </p>
+        </ScrollReveal>
 
         {/* Sections */}
         {[

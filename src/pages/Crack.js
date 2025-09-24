@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
+// ScrollReveal component to handle scroll-triggered animations
+import ScrollReveal from "../components/ui/ScrollReveal";
+
 export default function Crack() {
   const images = [
     { src: "/images/discount.webp", label: "Discount" },
@@ -31,15 +34,15 @@ export default function Crack() {
 
   return (
     <section className="bg-white text-center px-24px md:px-[32px] mt-48px md:mt-[56px] lg:mt-[80px] ">
-      <h2 className="text-fluid-h2 max-w-[300px] sm:max-w-[800px] mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px] font-medium tracking--5  text-black">
+      <ScrollReveal as="h2" containerClassName="text-fluid-h2 max-w-[300px] sm:max-w-[800px] mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px] font-medium tracking--5  text-black">
         Crack and <span className="text-[#7B1FA2]">Track Proposals</span> with
         Ease
-      </h2>
-      <p className="text-[#000000B2] leading-snug mb-[24px] md:mb-[32px] lg:mb-[40px] text-fluid-caption tracking--2 max-w-2xl mx-auto ">
+      </ScrollReveal>
+      <ScrollReveal as="p" containerClassName="text-[#000000B2] leading-snug mb-[24px] md:mb-[32px] lg:mb-[40px] text-fluid-caption tracking--2 max-w-2xl mx-auto ">
         Managing proposals, quotes, and related documents can be time-consuming
         and prone to errors. Accqrate CRM simplifies proposal management with
         features that streamline creation, tracking, and submission.
-      </p>
+      </ScrollReveal>
 
       <div className="flex flex-col items-center relative mt-24px">
         {/* Marquee Card */}
