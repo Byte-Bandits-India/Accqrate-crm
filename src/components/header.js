@@ -352,11 +352,8 @@ const Header = () => {
   const activeMenuData = menus.find((menu) => menu.id === activeMenu);
 
   return (
-    <header
-      ref={headerRef}
-      className="z-50 px-24px md:px-[30px] w-full bg-white "
-    >
-      <div className="w-full pt-[24px] md:pt-[32px]">
+    <header ref={headerRef} className="z-50 m-0 p-0 w-full bg-white lg:border">
+      <div className="w-full px-6 pt-6 lg:pt-0 md:px-[32px]">
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
           <div className="logo-container flex items-center justify-around gap-6">
@@ -364,14 +361,14 @@ const Header = () => {
               <img
                 src="/images/logo.svg"
                 alt="Accqrate Logo"
-                className="h-[25px] md:h-9 lg:h-10 w-auto cursor-pointer max-w-[110px] sm:max-w-[120px] md:max-w-[140px]"
+                className="h-[25px] md:h-9 lg:h-10 w-auto cursor-pointer max-w-[115px] sm:max-w-[100px] md:max-w-[140px]"
               />
             </Link>
 
             {/* Desktop Nav (≥1280px) with shadcn Navigation Menu */}
             <nav
               ref={navRef}
-              className="hidden xl:flex items-center justify-around xl:gap-5 2xl:gap-10 text-[14px] text-gray-600 flex-1"
+              className="hidden lg:flex items-center justify-around xl:gap-5 2xl:gap-10 text-[14px] text-gray-600 flex-1"
             >
               <NavigationMenu className="w-full">
                 <NavigationMenuList className="py-4">
@@ -393,7 +390,7 @@ const Header = () => {
                         className="!fixed left-0 right-0 top-0 !w-screen !max-w-none bg-white"
                         style={{ top: headerHeight }}
                       >
-                        <div className="w-[1044px] mx-auto px-8 py-10 shadow-lg rounded-xl flex flex-col">
+                        <div className="w-[900px] xl:w-[1044px] mx-auto px-8 py-10 shadow-lg rounded-xl flex flex-col">
                           {activeMenuData.type === "mega" ? (
                             // Products Mega Menu Layout
                             <div className="grid grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
@@ -572,7 +569,7 @@ const Header = () => {
           </div>
 
           {/* Right Section (≥1280px) */}
-          <div className="hidden xl:flex items-center gap-3 shrink-0">
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             <LangCountryDropdown
               selectedLanguage={selectedLanguage}
               setSelectedLanguage={setSelectedLanguage}
@@ -604,7 +601,7 @@ const Header = () => {
           </div>
 
           {/* Mobile/Tablet (<1280px) */}
-          <div className="flex md:flex xl:hidden items-center gap-3">
+          <div className="flex md:flex lg:hidden items-center gap-3">
             <LangCountryDropdown
               selectedLanguage={selectedLanguage}
               setSelectedLanguage={setSelectedLanguage}
@@ -631,7 +628,7 @@ const Header = () => {
 
       {/* Mobile Menu (<1280px) */}
       {isMobileMenuOpen && (
-        <div className="xl:hidden fixed top-[80px] left-0 w-full h-screen overflow-y-auto bg-white border-t border-gray-200 px-6 md:px-[32px] py-4 z-[999]">
+        <div className="xl:hidden fixed top-[70px] md:top-[80px] left-0 w-full h-screen overflow-y-auto bg-white px-6 md:px-[32px] py-4 z-[999]">
           <Accordion type="single" collapsible className="w-full">
             {menus.map(({ id, title, sections }) => (
               <AccordionItem key={id} value={id}>
