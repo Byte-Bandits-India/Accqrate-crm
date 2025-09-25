@@ -109,11 +109,15 @@ export default function Tools() {
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
-        <ScrollReveal as="h2" containerClassName="text-center text-fluid-h2 font-medium tracking--5 mb-[24px] md:mb-[32px] lg:mb-[40px]">
+        <ScrollReveal
+          as="h2"
+          containerClassName="text-center text-fluid-h2 font-medium tracking--5 mb-[24px] md:mb-[32px] lg:mb-[40px]"
+        >
           Actionable Insights at{" "}
           <span className="text-[#7B1FA2] font-medium">Your Fingertips</span>
         </ScrollReveal>
-        <ScrollReveal as="p"
+        <ScrollReveal
+          as="p"
           containerClassName="text-center text-[#000000B2] tracking--2 text-fluid-caption 
   max-w-lg leading-tight mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px] 
   md:max-w-[600px] lg:max-w-[800px]"
@@ -143,7 +147,7 @@ export default function Tools() {
         ].map((section, idx) => (
           <motion.div
             key={idx}
-            className="flex flex-col lg:flex-row lg:items-start gap-[24px] mt-24px md:mt-[32px] lg:mt-[40px] tracking--5"
+            className="flex flex-col lg:flex-row lg:items-start gap-[24px] mt-[30px] md:mt-[40px] lg:mt-[56px] tracking--5"
             initial={{ x: -100, opacity: 0 }}
             animate={isVisible ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: idx * 0.2 }}

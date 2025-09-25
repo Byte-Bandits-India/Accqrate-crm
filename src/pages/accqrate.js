@@ -68,7 +68,7 @@ export default function Accqrate() {
       <section
         className={`w-full px-24px md:px-[32px] flex flex-col items-center`}
       >
-        <h2 className="text-center text-fluid-h1 leading-tight tracking--5 font-semibold  mt-82px md:mt-[90px] lg:mt-[125px]">
+        <h2 className="text-center text-fluid-h1 leading-tight tracking--5 font-semibold  mt-82px">
           <span className="text-[#333333] ">Accqrate</span>{" "}
           <span className="text-[#7B1FA2] ">CRM</span>
         </h2>
@@ -83,12 +83,12 @@ export default function Accqrate() {
 
         <p
           lines={2}
-          className="text-center text-fluid-body font-light tracking--2 leading-tight md:font-semibold text-black mt-32px md:mt-[40px] "
+          className="text-center text-fluid-body font-light tracking--2 leading-tight md:font-semibold text-black mt-32px"
         >
           Empower Your Sales with Intelligent Lead Management & Conversion
         </p>
 
-        <p className=" max-w-[700px] text-center text-fluid-caption tracking--2 font-normal text-gray-400 mt-12px">
+        <p className=" max-w-[700px] text-center text-fluid-caption tracking--2 font-normal text-gray-400 mt-16px md:mt-[20px]">
           Accqrate CRM is not just a tool; it’s the heart of your sales engine.
           Powered by automation and real-time analytics, Accqrate CRM transforms
           your sales process making it smarter, faster, and more predictable.

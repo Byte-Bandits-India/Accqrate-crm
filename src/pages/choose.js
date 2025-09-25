@@ -103,7 +103,7 @@ export default function Choose() {
           variants={fadeInLeft}
           transition={{ delay: 0.2 }}
         >
-          <div className="relative inline-block max-w-[600px] md:max-w-[600px]">
+          <div className="relative inline-block max-w-[600px] md:max-w-[400px]">
             <Image
               src="/images/choose.svg"
               alt="Why Choose Accqrate Retail"
@@ -153,7 +153,7 @@ export default function Choose() {
       {/* Ready Section */}
       <motion.section
         id="readySection"
-        className=" mt-48px md:mt-[56px] md:px-[32px] px-24px text-center min-h-full "
+        className=" my-48px md:my-[56px] md:px-[32px] px-24px text-center min-h-full "
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
@@ -164,7 +164,7 @@ export default function Choose() {
           Ready to accelerate your retail business?
         </motion.h2>
         <motion.div
-          className="flex flex-col md:flex-row md:max-w-[700px] mx-auto justify-center gap-[12px] mt-24px"
+          className="flex flex-col md:flex-row md:max-w-[700px] mx-auto justify-center gap-[20px] mt-32px"
           variants={fadeInRight}
           transition={{ delay: 0.2 }}
         >

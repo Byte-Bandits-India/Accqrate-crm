@@ -4,10 +4,8 @@ import { LoadingContext } from "../utils/LoadingContext";
 import { motion, AnimatePresence } from "framer-motion";
 import AccordionCard from "../components/ui/accordion";
 
-
 // ScrollReveal component to handle scroll-triggered animations
-import ScrollReveal from "../components/ui/ScrollReveal"
-
+import ScrollReveal from "../components/ui/ScrollReveal";
 
 export default function Smart() {
   const { loading } = useContext(LoadingContext);
@@ -143,11 +141,17 @@ export default function Smart() {
   return (
     <>
       <div className=" w-full max-w-[1280px] mx-auto">
-        <ScrollReveal as="h1" containerClassName="text-center text-fluid-h2 leading-tight tracking--5 font-semibold  mt-48px md:mt-[56px] lg:mt-[80px] px-24px md:px-[32px]">
+        <ScrollReveal
+          as="h1"
+          containerClassName="text-center text-fluid-h2 leading-tight tracking--5 font-semibold  mt-48px md:mt-[56px] px-24px md:px-[32px]"
+        >
           A Smart, Scalable Solution for{" "}
           <span className="text-[#7B1FA2]"> Every Sales Team </span>
         </ScrollReveal>
-        <ScrollReveal as="p" containerClassName="text-center text-fluid-caption mt-16px mt-48px md:mt-[24px] px-24px md:px-[32px] font-light tracking--2  text-black  ">
+        <ScrollReveal
+          as="p"
+          containerClassName="text-center text-fluid-caption px-24px md:px-[32px] font-light tracking--2"
+        >
           Every sales team faces common obstacles: 
         </ScrollReveal>
       </div>
@@ -179,7 +183,10 @@ export default function Smart() {
           animate={isVisible ? "visible" : "hidden"}
         >
           <div className="text-center tracking--2">
-            <ScrollReveal as="p" containerClassName="font-light leading-snug  md:max-w-6xl text-fluid-caption md:text-fluid-body lg:text-fluid-h3 ">
+            <ScrollReveal
+              as="p"
+              containerClassName="font-light leading-snug  md:max-w-6xl text-fluid-caption md:text-fluid-body lg:text-fluid-h3 "
+            >
               Accqrate CRM was meticulously designed to solve these problems.
               With its intelligent workflows, deep data insights, and seamless
               integrations, it enables your team to focus on building

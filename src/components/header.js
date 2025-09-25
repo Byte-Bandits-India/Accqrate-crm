@@ -246,8 +246,9 @@ const LangCountryDropdown = ({
 
       {show && (
         <div
-          className={`absolute ${align === "right" ? "right-0" : "left-0"
-            } top-full mt-2 max-w-xs w-60 bg-white rounded-md shadow-lg z-50 p-4 text-sm text-gray-700`}
+          className={`absolute ${
+            align === "right" ? "right-0" : "left-0"
+          } top-full mt-2 max-w-xs w-60 bg-white rounded-md shadow-lg z-50 p-4 text-sm text-gray-700`}
         >
           {/* Languages */}
           <div className="mb-2 font-semibold text-black">Select Language</div>
@@ -255,10 +256,11 @@ const LangCountryDropdown = ({
             {languages.map((lang) => (
               <button
                 key={lang.code}
-                className={`px-3 py-1 rounded-full transition ${selectedLanguage === lang.name
-                  ? "bg-gray-100 text-black font-semibold"
-                  : "text-black"
-                  }`}
+                className={`px-3 py-1 rounded-full transition ${
+                  selectedLanguage === lang.name
+                    ? "bg-gray-100 text-black font-semibold"
+                    : "text-black"
+                }`}
                 onClick={() => {
                   setSelectedLanguage(lang.name);
                   setShow(false);
@@ -414,10 +416,11 @@ const Header = () => {
                                   {activeMenuData.sections.map((section) => (
                                     <li
                                       key={section.heading}
-                                      className={`cursor-pointer px-2 py-1 ${activeSection === section.heading
-                                        ? "font-semibold"
-                                        : "text-gray-700"
-                                        }`}
+                                      className={`cursor-pointer px-2 py-1 ${
+                                        activeSection === section.heading
+                                          ? "font-semibold"
+                                          : "text-gray-700"
+                                      }`}
                                       onMouseEnter={() =>
                                         setActiveSection(section.heading)
                                       }
@@ -623,8 +626,9 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen((p) => !p)}
             >
               <i
-                className={`fa-solid ${isMobileMenuOpen ? "fa-xmark" : "fa-bars"
-                  }`}
+                className={`fa-solid ${
+                  isMobileMenuOpen ? "fa-xmark" : "fa-bars"
+                }`}
               ></i>
             </button>
           </div>
