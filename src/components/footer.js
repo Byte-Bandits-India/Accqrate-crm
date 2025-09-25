@@ -96,24 +96,40 @@ export default function Footer() {
     },
     {
       title: "Integrations",
-      items: [
-        "SAP suits",
-        "Oracle suits",
-        "Microsoft suits",
-        "VAT Calculator",
-      ],
+      items: ["SAP suits", "Oracle suits", "Microsoft suits", "VAT Calculator"],
     },
   ];
 
   const socialLinks = [
-    { href: "https://www.facebook.com/people/Accqrate/100077291530631/", src: "/images/facebook.svg" },
-    { href: "https://www.linkedin.com/showcase/accqrate", src: "/images/linkedin.svg" },
+    {
+      href: "https://www.facebook.com/people/Accqrate/100077291530631/",
+      src: "/images/facebook.svg",
+    },
+    {
+      href: "https://www.linkedin.com/showcase/accqrate",
+      src: "/images/linkedin.svg",
+    },
     { href: "https://twitter.com/accqrate_erp", src: "/images/twitter.svg" },
-    { href: "https://www.instagram.com/accqrateerp/", src: "/images/instagram.svg" },
-    { href: "https://www.youtube.com/channel/UCAzO34h3KxRrObyRor70D9A", src: "/images/youtube.svg" },
-    { href: "https://www.reddit.com/user/Accqrate_ERP", src: "/images/reddit.svg" },
-    { href: "https://www.snapchat.com/add/accqrate", src: "/images/snapchat.svg" },
-    { href: "https://api.whatsapp.com/send/?phone=966541999357&type=phone_number&app_absent=0", src: "/images/whatsapp.svg" },
+    {
+      href: "https://www.instagram.com/accqrateerp/",
+      src: "/images/instagram.svg",
+    },
+    {
+      href: "https://www.youtube.com/channel/UCAzO34h3KxRrObyRor70D9A",
+      src: "/images/youtube.svg",
+    },
+    {
+      href: "https://www.reddit.com/user/Accqrate_ERP",
+      src: "/images/reddit.svg",
+    },
+    {
+      href: "https://www.snapchat.com/add/accqrate",
+      src: "/images/snapchat.svg",
+    },
+    {
+      href: "https://api.whatsapp.com/send/?phone=966541999357&type=phone_number&app_absent=0",
+      src: "/images/whatsapp.svg",
+    },
   ];
 
   if (loading || !isVisible) {
@@ -127,12 +143,7 @@ export default function Footer() {
             <div key={idx}>
               <Skeleton height="24px" width="60%" className="mb-4" />
               {[...Array(6)].map((_, i) => (
-                <Skeleton
-                  key={i}
-                  height="18px"
-                  width="80%"
-                  className="mb-2"
-                />
+                <Skeleton key={i} height="18px" width="80%" className="mb-2" />
               ))}
             </div>
           ))}
@@ -157,7 +168,7 @@ export default function Footer() {
       className="bg-white border-gray-200 font-inter min-h-full px-6 md:px-[32px]"
     >
       {showSections && (
-        <div className="flex justify-between flex-nowrap max-w-[1280px] mx-auto px-4 py-10 text-black gap-8 overflow-x-auto">
+        <div className="flex justify-between flex-nowrap max-w-[1280px] mx-auto px-4 py-10 text-[#333333] gap-8 overflow-x-auto">
           {sections.map((section, idx) => (
             <div key={idx} className="flex flex-col">
               <h3 className="font-bold mb-4 text-[16px] leading-6 whitespace-normal break-words">

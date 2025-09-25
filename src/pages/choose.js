@@ -87,7 +87,7 @@ export default function Choose() {
     <>
       <motion.section
         id="chooseSection"
-        className="bg-[#F2F2F2] text-center font-sans min-h-full m-0 mt-48px md:mt-[56px] md:px-[32px] py-[24px] md:py-[32px] px-24px"
+        className="bg-[#F2F2F2] text-center font-sans min-h-full m-0 mt-48px md:mt-[56px] md:px-[32px] py-[24px] md:py-[32px] px-24px text-[#333333]"
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
@@ -132,7 +132,7 @@ export default function Choose() {
               {" "}
               Stay ready for every regulation no last-minute changes.
             </p>
-            <ol className="md:pl-4 md:pr-20 text-black font-light tracking--2 mb-8 space-y-4 text-fluid-caption mt-12px">
+            <ol className="md:pl-4 md:pr-20 font-light tracking--2 mb-8 space-y-4 text-fluid-caption mt-12px">
               <li>
                 1. Device & vendor freedom: Use any hardware, any printer, no
                 lock-in.
@@ -153,12 +153,12 @@ export default function Choose() {
       {/* Ready Section */}
       <motion.section
         id="readySection"
-        className=" my-48px md:my-[56px] md:px-[32px] px-24px text-center min-h-full "
+        className=" my-48px md:my-[56px] md:px-[32px] px-24px text-center min-h-full text-[#333333] mt-8"
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
         <motion.h2
-          className="text-black font-semibold  text-fluid-h2"
+          className="font-semibold  text-fluid-h2"
           variants={fadeInRight}
         >
           Ready to accelerate your retail business?

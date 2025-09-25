@@ -104,7 +104,7 @@ export default function Tools() {
     <>
       <motion.section
         id="toolsSection"
-        className="bg-white mt-48px md:mt-[56px] lg:mt-[80px] px-24px md:px-[32px] max-w-[1200px] mx-auto"
+        className="bg-white mt-48px md:mt-[56px] lg:mt-[80px] px-24px md:px-[32px] max-w-[1200px] mx-auto text-[#333333]"
         variants={containerVariant}
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}

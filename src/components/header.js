@@ -396,7 +396,7 @@ const Header = () => {
                         }
                       }}
                     >
-                      <NavigationMenuTrigger className="text-[0.875rem] text-gray-600 data-[state=open]:text-[#534ED3] data-[state=open]:bg-transparent hover:bg-transparent hover:text-[#534ED3] focus:bg-transparent">
+                      <NavigationMenuTrigger className="text-[0.875rem] text-[#333333] data-[state=open]:text-[#534ED3] data-[state=open]:bg-transparent hover:bg-transparent hover:text-[#534ED3] focus:bg-transparent">
                         {title}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent
@@ -637,11 +637,11 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="xl:hidden fixed top-[70px] md:top-[80px] left-0 w-full h-screen overflow-y-auto bg-white px-6 md:px-[32px] py-4 z-[999]">
+        <div className="xl:hidden fixed text-[#333333] top-[70px] md:top-[80px] left-0 w-full h-screen overflow-y-auto bg-white px-6 md:px-[32px] py-4 z-[999]">
           <Accordion type="single" collapsible className="w-full">
             {menus.map(({ id, title, sections }) => (
               <AccordionItem key={id} value={id}>
-                <AccordionTrigger className="text-gray-800 font-semibold hover:text-[#534ED3]">
+                <AccordionTrigger className="font-semibold hover:text-[#534ED3]">
                   {title}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -651,7 +651,7 @@ const Header = () => {
                         key={sectionIndex}
                         value={`${id}-${section.heading}`}
                       >
-                        <AccordionTrigger className="fflex items-center justify-start gap-2 text-gray-700 font-medium">
+                        <AccordionTrigger className="fflex items-center justify-start gap-2 text-[#333333]font-medium">
                           {section.images && (
                             <img
                               src={section.images}

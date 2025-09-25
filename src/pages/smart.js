@@ -140,7 +140,7 @@ export default function Smart() {
 
   return (
     <>
-      <div className=" w-full max-w-[1280px] mx-auto">
+      <div className=" w-full max-w-[1280px] mx-auto text-[#333333]">
         <ScrollReveal
           as="h1"
           containerClassName="text-center text-fluid-h2 leading-tight tracking--5 font-semibold  mt-48px md:mt-[56px] px-24px md:px-[32px]"
@@ -174,7 +174,7 @@ export default function Smart() {
       {/* Owner Section */}
       <section
         id="ownerSection"
-        className=" w-full max-w-[1280px]  mx-auto flex items-center justify-center mt-24px rounded-lg px-24px md:px-8 lg:px-10 mt-24px md:mt-[32px] lg:mt-[40px] "
+        className=" w-full max-w-[1280px] text-[#333333]  mx-auto flex items-center justify-center mt-24px rounded-lg px-24px md:px-8 lg:px-10 mt-24px md:mt-[32px] lg:mt-[40px] "
       >
         <motion.div
           className="flex items-center justify-center"

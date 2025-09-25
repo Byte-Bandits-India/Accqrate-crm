@@ -13,8 +13,6 @@ import {
 // ScrollReveal component to handle scroll-triggered animations
 import ScrollReveal from "../components/ui/ScrollReveal";
 
-
-
 export default function Capture() {
   const { loading } = useContext(LoadingContext);
   const [isVisible, setIsVisible] = useState(false);
@@ -134,13 +132,19 @@ export default function Capture() {
       {/* Pos Section */}
       <section
         id="posSection"
-        className=" px-24px md:px-[32px] rounded-xl  mt-48px md:mt-[56px] lg:mt-[80px]"
+        className=" px-24px md:px-[32px] rounded-xl  mt-48px md:mt-[56px] lg:mt-[80px] text-[#333333]"
       >
-        <ScrollReveal as="h1" containerClassName="text-center text-fluid-h2 leading-tight max-w-[340px] sm:max-w-[800px] mx-auto tracking--5 font-semibold  mt-48px px-24px">
+        <ScrollReveal
+          as="h1"
+          containerClassName="text-center text-fluid-h2 leading-tight max-w-[340px] sm:max-w-[800px] mx-auto tracking--5 font-semibold  mt-48px px-24px"
+        >
           Capture, Track, and{" "}
           <span className="text-[#7B1FA2]"> Convert Leads </span>
         </ScrollReveal>
-        <ScrollReveal as="p" containerClassName="text-center text-gray-500 text-fluid-caption md:max-w-[1062px] mx-auto mt-16px px-24px font-light tracking--2">
+        <ScrollReveal
+          as="p"
+          containerClassName="text-center text-gray-500 text-fluid-caption md:max-w-[1062px] mx-auto mt-16px px-24px font-light tracking--2"
+        >
           Accqrate CRM ensures you never lose a lead again. From the moment they
           enter your system to the moment they convert, Accqrate CRM tracks and
           nurtures leads seamlessly, so your team can focus on closing sales
@@ -209,80 +213,83 @@ export default function Capture() {
 
       {/* Erp Section */}
 
-<section
-  id="erpSection"
-  className="px-24px md:px-[32px] max-w-[1200px] mx-auto text-center mt-48px md:mt-[56px] lg:mt-[80px]"
->
-  <motion.div
-    initial={{ x: -100, opacity: 0 }}       // start left offscreen
-    whileInView={{ x: 0, opacity: 1 }}      // animate to center
-    viewport={{ once: true, amount: 0.3 }}  // trigger when 30% visible
-    transition={{ duration: 0.8 }}          // animation speed
-  >
-    <ScrollReveal as="h2" containerClassName="text-fluid-h2 font-medium tracking--5 leading-tight ">
-      Automate Your <span className="text-[#7B1FA2]">Sales Pipeline</span>
-    </ScrollReveal>
-
-    <ScrollReveal
-      as="p"
-      containerClassName="text-fluid-caption text-[#737373] mt-16px md:mt-[24px] lg:mt-[32px] md:max-w-[1062px] tracking--2 max-w-4xl mx-auto"
-    >
-      Stop wasting time on manual tasks. Accqrate CRM automates everything
-      from lead capture to conversion, giving your sales team more time to
-      do what they do best — close deals.
-    </ScrollReveal>
-
-    {[
-      {
-        text: "Automated Lead Assignment:",
-        desc: "Automatically assign leads based on predefined criteria.",
-        video: "/videos/pos.mp4",
-      },
-      {
-        text: "Automated Follow-Ups:",
-        desc: "Ensure that no lead is forgotten with automated reminders for your sales reps.",
-        video: "/videos/dashboard.mp4",
-      },
-      {
-        text: "Custom Workflows:",
-        desc: "Design workflows to match your business processes, ensuring every action is streamlined and efficient.",
-        video: "/videos/crm.mp4",
-      },
-    ].map((feature, i) => (
-      <div
-        key={i}
-        className="flex flex-col lg:flex-row lg:items-start justify-between gap-10 mt-24px md:mt-[32px] lg:mt-[40px]"
+      <section
+        id="erpSection"
+        className="px-24px md:px-[32px] max-w-[1200px] mx-auto text-center mt-48px md:mt-[56px] text-[#333333] lg:mt-[80px]"
       >
-        {/* Text */}
-        <div className="flex-1">
-          <p className="md:block hidden text-left leading-snug text-fluid-h3 text-[#7B1FA2] font-light max-w-lg">
-            {feature.text} {feature.desc}
-          </p>
-          <p className="md:hidden text-left tracking--2 leading-snug text-fluid-h3 text-[#7B1FA2] font-light">
-            {feature.text} <br />
-            <span className="text-gray-700 text-fluid-caption">{feature.desc}</span>
-          </p>
-        </div>
+        <motion.div
+          initial={{ x: -100, opacity: 0 }} // start left offscreen
+          whileInView={{ x: 0, opacity: 1 }} // animate to center
+          viewport={{ once: true, amount: 0.3 }} // trigger when 30% visible
+          transition={{ duration: 0.8 }} // animation speed
+        >
+          <ScrollReveal
+            as="h2"
+            containerClassName="text-fluid-h2 font-medium tracking--5 leading-tight "
+          >
+            Automate Your <span className="text-[#7B1FA2]">Sales Pipeline</span>
+          </ScrollReveal>
 
-        {/* Video */}
-        <div className="flex-1 flex justify-center">
-          <video
-            src={feature.video}
-            muted
-            autoPlay
-            loop
-            playsInline
-            controls={false}
-            preload="auto"
-            className="w-full max-w-md h-auto"
-          />
-        </div>
-      </div>
-    ))}
-  </motion.div>
-</section>
+          <ScrollReveal
+            as="p"
+            containerClassName="text-fluid-caption text-[#737373] mt-16px md:mt-[24px] lg:mt-[32px] md:max-w-[1062px] tracking--2 max-w-4xl mx-auto"
+          >
+            Stop wasting time on manual tasks. Accqrate CRM automates everything
+            from lead capture to conversion, giving your sales team more time to
+            do what they do best — close deals.
+          </ScrollReveal>
 
+          {[
+            {
+              text: "Automated Lead Assignment:",
+              desc: "Automatically assign leads based on predefined criteria.",
+              video: "/videos/pos.mp4",
+            },
+            {
+              text: "Automated Follow-Ups:",
+              desc: "Ensure that no lead is forgotten with automated reminders for your sales reps.",
+              video: "/videos/dashboard.mp4",
+            },
+            {
+              text: "Custom Workflows:",
+              desc: "Design workflows to match your business processes, ensuring every action is streamlined and efficient.",
+              video: "/videos/crm.mp4",
+            },
+          ].map((feature, i) => (
+            <div
+              key={i}
+              className="flex flex-col lg:flex-row lg:items-start justify-between gap-10 mt-24px md:mt-[32px] lg:mt-[40px]"
+            >
+              {/* Text */}
+              <div className="flex-1">
+                <p className="md:block hidden text-left leading-snug text-fluid-h3 text-[#7B1FA2] font-light max-w-lg">
+                  {feature.text} {feature.desc}
+                </p>
+                <p className="md:hidden text-left tracking--2 leading-snug text-fluid-h3 text-[#7B1FA2] font-light">
+                  {feature.text} <br />
+                  <span className="text-gray-700 text-fluid-caption">
+                    {feature.desc}
+                  </span>
+                </p>
+              </div>
 
+              {/* Video */}
+              <div className="flex-1 flex justify-center">
+                <video
+                  src={feature.video}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  controls={false}
+                  preload="auto"
+                  className="w-full max-w-md h-auto"
+                />
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </section>
     </>
   );
 }

@@ -33,18 +33,24 @@ export default function Crack() {
   ];
 
   return (
-    <section className="bg-white text-center px-24px md:px-[32px] mt-48px md:mt-[56px] lg:mt-[80px] ">
-      <ScrollReveal as="h2" containerClassName="text-fluid-h2 max-w-[300px] sm:max-w-[800px] mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px] font-medium tracking--5  text-black">
+    <section className="bg-white text-center px-24px md:px-[32px] mt-48px md:mt-[56px] lg:mt-[80px] text-[#333333]">
+      <ScrollReveal
+        as="h2"
+        containerClassName="text-fluid-h2 max-w-[300px] sm:max-w-[800px] mx-auto mb-[24px] md:mb-[32px] text-[#333333] lg:mb-[40px] font-medium tracking--5"
+      >
         Crack and <span className="text-[#7B1FA2]">Track Proposals</span> with
         Ease
       </ScrollReveal>
-      <ScrollReveal as="p" containerClassName="text-[#000000B2] leading-snug mb-[24px] md:mb-[32px] lg:mb-[40px] text-fluid-caption tracking--2 max-w-2xl mx-auto ">
+      <ScrollReveal
+        as="p"
+        containerClassName="text-[#000000B2] leading-snug mb-[24px] md:mb-[32px] lg:mb-[40px] text-fluid-caption tracking--2 max-w-2xl mx-auto "
+      >
         Managing proposals, quotes, and related documents can be time-consuming
         and prone to errors. Accqrate CRM simplifies proposal management with
         features that streamline creation, tracking, and submission.
       </ScrollReveal>
 
-      <div className="flex flex-col items-center relative mt-24px">
+      <div className="flex flex-col items-center relative mt-24px text-[#333333]">
         {/* Marquee Card */}
         <div className="sticky h-[240px] md:h-[300px] bg-white border border-gray-400 rounded-2xl shadow-xl p-4 max-w-4xl w-full z-10">
           <div className="text-fluid-h3 leading-tight font-bold text-pink-700 text-center mb-5">
