@@ -69,7 +69,7 @@ export default function Accqrate() {
         className={`w-full px-24px md:px-[32px] flex flex-col items-center`}
       >
         <h2 className="text-center text-fluid-h1 leading-tight tracking--5 font-semibold  mt-82px md:mt-[90px] lg:mt-[125px]">
-          <span className="text-black ">Accqrate</span>{" "}
+          <span className="text-[#333333] ">Accqrate</span>{" "}
           <span className="text-[#7B1FA2] ">CRM</span>
         </h2>
 
