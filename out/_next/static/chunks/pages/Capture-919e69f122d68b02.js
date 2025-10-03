@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[14],{5872:(_,n,u)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/Capture",function(){return u(6842)}])}},_=>{_.O(0,[742,588,461,636,593,792],()=>_(_.s=5872)),_N_E=_.O()}]);

@@ -1,7 +1,8 @@
 "use client";
 
+import React from "react";
 import { useContext, useState, useEffect, JSX } from "react";
-import Skeleton from "../components/skeleton";
+import Skeleton from "../components/ui/skeleton";
 import { LoadingContext } from "../utils/LoadingContext";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
@@ -38,27 +39,64 @@ export default function Choose(): JSX.Element {
   if (loading || !isVisible) {
     return (
       <>
+        {/* Choose Section Skeleton */}
         <section
           id="chooseSection"
-          className="bg-[#f2f2f2] text-center font-sans min-h-full m-0 py-8"
+          className="bg-[#f2f2f2] font-sans min-h-full m-0 py-8 px-6"
         >
-          <Skeleton height="36px" width="60%" className="mb-6 mx-auto" />
-          <Skeleton height="300px" width="700px" className="mb-6 mx-auto" />
-          <Skeleton height="80px" width="80px" className="mb-6 mx-auto" />
-          <Skeleton height="20px" width="80%" className="mb-3 mx-auto" />
-          <Skeleton height="20px" width="80%" className="mb-3 mx-auto" />
-          <Skeleton height="20px" width="80%" className="mb-3 mx-auto" />
+          <div className="max-w-6xl mx-auto">
+            {/* Title Skeleton */}
+            <div className="text-center mb-8">
+              <Skeleton height="48px" width="400px" className="mx-auto mb-4 rounded-lg" />
+            </div>
+
+            {/* Content Skeleton */}
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+              {/* Image Container Skeleton */}
+              <div className="flex-1 max-w-[500px]">
+                <div className="relative">
+                  <Skeleton height="350px" width="100%" className="rounded-lg mb-4" />
+                  {/* Animated character skeleton */}
+                  <Skeleton height="80px" width="80px" className="absolute -bottom-4 -right-4 rounded-full" />
+                </div>
+              </div>
+
+              {/* Text Content Skeleton */}
+              <div className="flex-1 max-w-[500px] space-y-4">
+                <Skeleton height="32px" width="80%" className="rounded-md lg:hidden" />
+                <Skeleton height="24px" width="90%" className="rounded-md lg:hidden" />
+
+                <div className="space-y-3">
+                  <Skeleton height="20px" width="100%" className="rounded-md" />
+                  <Skeleton height="20px" width="95%" className="rounded-md" />
+                  <Skeleton height="20px" width="90%" className="rounded-md" />
+                  <Skeleton height="20px" width="85%" className="rounded-md" />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
+        {/* Ready Section Skeleton */}
         <section
           id="readySection"
-          className="bg-gray-200 mt-12 px-6 text-center min-h-full"
+          className="bg-white mt-12 px-6 min-h-full"
         >
-          <Skeleton height="36px" width="60%" className="mb-8 mx-auto rounded-md" />
-          <div className="flex flex-wrap justify-center gap-4">
-            {buttons.map((_, idx) => (
-              <Skeleton key={idx} height="44px" width="180px" className="rounded-full" />
-            ))}
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Title Skeleton */}
+            <Skeleton height="48px" width="500px" className="mx-auto mb-8 rounded-lg" />
+
+            {/* Buttons Skeleton */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              {buttons.map((_, idx) => (
+                <Skeleton
+                  key={idx}
+                  height="56px"
+                  width="200px"
+                  className="rounded-lg mx-auto sm:mx-0"
+                />
+              ))}
+            </div>
           </div>
         </section>
       </>

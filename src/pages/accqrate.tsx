@@ -3,7 +3,7 @@
 import { CustomImage } from "../components/CommonComponents";
 import { JSX, useContext } from "react";
 import { LoadingContext } from "../utils/LoadingContext";
-import Skeleton from "../components/skeleton";
+import Skeleton from "../components/ui/skeleton";
 import { motion } from "framer-motion";
 import ButtonGroup from "../components/ui/ButtonGroup";
 import React from "react";
@@ -177,8 +177,8 @@ export default function Accqrate(): JSX.Element {
             <CustomImage
               src="/images/zatak.svg"
               alt="E-Invoice"
-              width={350}
-              height={350}
+              width="350"
+              height="350"
               className="h-[200px] md:h-[250px]"
             />
           </motion.div>

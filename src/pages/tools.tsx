@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, FC } from "react";
-import Skeleton from "../components/skeleton";
+import Skeleton from "../components/ui/skeleton";
 import { LoadingContext } from "../utils/LoadingContext";
 import { motion, easeOut } from "framer-motion";
 import ScrollReveal from "../components/ui/ScrollReveal";

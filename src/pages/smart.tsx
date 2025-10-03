@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, FC } from "react";
-import Skeleton from "../components/skeleton";
+import Skeleton from "../components/ui/skeleton";
 import { LoadingContext } from "../utils/LoadingContext";
 import { motion, easeOut } from "framer-motion";
 import AccordionCard from "../components/ui/accordion";
@@ -124,7 +124,7 @@ const Smart: FC = () => {
           as="p"
           containerClassName="text-center text-fluid-caption px-6 md:px-8 font-light tracking--2"
         >
-          Every sales team faces common obstacles: 
+          Every sales team faces common obstacles:
         </ScrollReveal>
       </div>
 
@@ -135,8 +135,7 @@ const Smart: FC = () => {
               key={idx}
               title={card.title}
               desc={card.desc}
-              video={card.video}
-              bgColor={card.bgColor} // NOW ACCEPTED
+              video={card.video}// NOW ACCEPTED
               isOpen={openIndex === idx}
               onToggle={() => setOpenIndex(openIndex === idx ? null : idx)}
             />
