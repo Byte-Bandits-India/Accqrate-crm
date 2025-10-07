@@ -395,15 +395,6 @@ const Header: React.FC = () => {
   }, [pathname]);
 
   useEffect(() => {
-    const handleRouteChange = () => setIsMobileMenuOpen(false);
-    router.events?.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events?.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router]);
-
-
-  useEffect(() => {
     const computeHeaderHeight = () => {
       const h = headerRef.current?.getBoundingClientRect().height || 0;
       setHeaderHeight(h);
