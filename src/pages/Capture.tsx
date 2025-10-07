@@ -11,7 +11,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "../components/ui/accordion";
-import ScrollReveal from "../components/ui/ScrollReveal";
+import FadeUp from "../components/ui/FadeUp";
 
 export default function Capture(): JSX.Element {
   const { loading } = useContext(LoadingContext);
@@ -121,30 +121,25 @@ export default function Capture(): JSX.Element {
         id="posSection"
         className=" px-24px md:px-[32px] rounded-xl  mt-48px md:mt-[56px] lg:mt-[80px] text-[#333333]"
       >
-        <ScrollReveal
-          as="h1"
-          containerClassName="text-center text-fluid-h2 leading-tight max-w-[340px] sm:max-w-[800px] mx-auto tracking--5 font-semibold  mt-48px px-24px"
-        >
-          Capture, Track, and <span className="text-[#7B1FA2]"> Convert Leads </span>
-        </ScrollReveal>
+        <FadeUp>
+          <h1 className="text-center text-fluid-h2 leading-tight max-w-[340px] sm:max-w-[800px] mx-auto tracking-heading font-medium  mt-48px px-24px"
+          >
+            Capture, Track, and <br className="md:hidden" /> <span className="text-[#7B1FA2]"> Convert Leads </span>
+          </h1>
 
-        <ScrollReveal
-          as="p"
-          containerClassName="text-center text-gray-500 text-fluid-caption md:max-w-[1062px] mx-auto mt-16px px-24px font-light tracking--2"
-        >
-          Accqrate CRM ensures you never lose a lead again. From the moment they
-          enter your system to the moment they convert, Accqrate CRM tracks and
-          nurtures leads seamlessly, so your team can focus on closing sales
-          rather than tracking down prospects.
-        </ScrollReveal>
+          <p className="text-center text-gray-500 text-fluid-caption md:max-w-[1062px] mx-auto mt-6 font-light tracking-para"
+          >
+            Accqrate CRM ensures you never lose a lead again. <br className="md:hidden" /> From the moment they
+            enter your system to the <br className="md:hidden" /> moment they convert, Accqrate CRM tracks and <br className="md:hidden" />
+            nurtures leads seamlessly, so your team can focus on <br className="md:hidden" /> closing sales
+            rather than tracking down prospects.
+          </p>
+        </FadeUp>
 
-        <motion.div
-          variants={variant}
-          initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
+        <div
           className="max-w-[1000px] mx-auto"
         >
-          <div>
+          <FadeUp>
             <video
               src="/videos/barcode.mp4"
               muted
@@ -153,7 +148,7 @@ export default function Capture(): JSX.Element {
               playsInline
               className="w-full h-auto object-contain rounded-lg mt-24px md:mt-[32px] lg:mt-[40px]"
             />
-          </div>
+          </FadeUp>
 
           <Accordion
             type="single"
@@ -194,7 +189,7 @@ export default function Capture(): JSX.Element {
               </>
             </AccordionCard>
           </Accordion>
-        </motion.div>
+        </div>
       </section>
 
       {/* Erp Section */}
@@ -202,27 +197,21 @@ export default function Capture(): JSX.Element {
         id="erpSection"
         className="px-24px md:px-[32px] max-w-[1200px] mx-auto text-center mt-48px md:mt-[56px] text-[#333333] lg:mt-[80px]"
       >
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
+        <div
         >
-          <ScrollReveal
-            as="h2"
-            containerClassName="text-fluid-h2 font-medium tracking--5 leading-tight "
-          >
-            Automate Your <span className="text-[#7B1FA2]">Sales Pipeline</span>
-          </ScrollReveal>
+          <FadeUp>
+            <h2 className="text-fluid-h2 font-medium tracking-heading leading-tight "
+            >
+              Automate Your <span className="text-[#7B1FA2]">Sales Pipeline</span>
+            </h2>
 
-          <ScrollReveal
-            as="p"
-            containerClassName="text-fluid-caption text-[#737373] mt-16px md:mt-[24px] lg:mt-[32px] md:max-w-[1062px] tracking--2 max-w-4xl mx-auto"
-          >
-            Stop wasting time on manual tasks. Accqrate CRM automates everything
-            from lead capture to conversion, giving your sales team more time to
-            do what they do best — close deals.
-          </ScrollReveal>
+            <p className="text-fluid-caption text-[#737373] mt-16px md:mt-[24px] lg:mt-[32px] md:max-w-[1062px] tracking-para max-w-4xl mx-auto"
+            >
+              Stop wasting time on manual tasks. Accqrate CRM automates everything
+              from lead capture to conversion, giving your sales team more time to
+              do what they do best — close deals.
+            </p>
+          </FadeUp>
 
           {[
             {
@@ -245,19 +234,19 @@ export default function Capture(): JSX.Element {
               key={i}
               className="flex flex-col lg:flex-row lg:items-start justify-between gap-10 mt-24px md:mt-[32px] lg:mt-[40px]"
             >
-              <div className="flex-1">
+              <FadeUp className="flex-1">
                 <p className="md:block hidden text-left leading-snug text-fluid-h3 text-[#7B1FA2] font-light max-w-lg">
                   {feature.text} {feature.desc}
                 </p>
                 <p className="md:hidden text-left tracking--2 leading-snug text-fluid-h3 text-[#7B1FA2] font-light">
                   {feature.text} <br />
-                  <span className="text-gray-700 text-fluid-caption">
-                    {feature.desc}
-                  </span>
                 </p>
-              </div>
+                <p className="text-gray-700 text-left mt-[16px] tracking-para text-fluid-caption font-normal">
+                  {feature.desc}
+                </p>
+              </FadeUp>
 
-              <div className="flex-1 flex justify-center">
+              <FadeUp className="flex-1 flex justify-center">
                 <video
                   src={feature.video}
                   muted
@@ -268,10 +257,10 @@ export default function Capture(): JSX.Element {
                   preload="auto"
                   className="w-full max-w-md h-auto"
                 />
-              </div>
+              </FadeUp>
             </div>
           ))}
-        </motion.div>
+        </div>
       </section>
     </>
   );

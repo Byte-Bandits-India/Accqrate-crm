@@ -3,7 +3,7 @@ import Skeleton from "../components/ui/skeleton";
 import { LoadingContext } from "../utils/LoadingContext";
 import { motion, easeOut } from "framer-motion";
 import AccordionCard from "../components/ui/accordion";
-import ScrollReveal from "../components/ui/ScrollReveal";
+import FadeUp from "../components/ui/FadeUp";
 
 interface Card {
   title: string;
@@ -105,31 +105,22 @@ const Smart: FC = () => {
     },
   ];
 
-  const variant = {
-    hidden: { x: 100, opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { duration: 0.8, ease: easeOut } },
-  };
-
   return (
     <>
-      <div className="w-full max-w-[1280px] mx-auto text-[#333333]">
-        <ScrollReveal
-          as="h1"
-          containerClassName="text-center text-fluid-h2 leading-tight tracking--5 font-semibold mt-12 md:mt-14 px-6 md:px-8"
+      <FadeUp className="w-full max-w-[1280px] mx-auto text-[#333333]">
+        <h2 className="text-center text-fluid-h2 leading-tight tracking-heading mb-6 font-semibold mt-[53px] md:mt-14 px-6 md:px-8"
         >
-          A Smart, Scalable Solution for <span className="text-[#7B1FA2]"> Every Sales Team </span>
-        </ScrollReveal>
+          A Smart, Scalable Solution <br className="md:hidden" /> for <span className="text-[#7B1FA2]"> Every Sales Team </span>
+        </h2>
 
-        <ScrollReveal
-          as="p"
-          containerClassName="text-center text-fluid-caption px-6 md:px-8 font-light tracking--2"
+        <p className="text-center text-[14px] md:text-fluid-caption px-6 md:px-8 font-light tracking-para"
         >
           Every sales team faces common obstacles:
-        </ScrollReveal>
-      </div>
+        </p>
+      </FadeUp>
 
       <section id="transformSection" className={sectionPadding}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+        <FadeUp className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
           {cards.map((card, idx) => (
             <AccordionCard
               key={idx}
@@ -140,31 +131,26 @@ const Smart: FC = () => {
               onToggle={() => setOpenIndex(openIndex === idx ? null : idx)}
             />
           ))}
-        </div>
+        </FadeUp>
       </section>
 
       <section
         id="ownerSection"
         className="w-full max-w-[1280px] text-[#333333] mx-auto flex items-center justify-center mt-6 md:mt-8 lg:mt-10 rounded-lg px-6 md:px-8 lg:px-10"
       >
-        <motion.div
+        <div
           className="flex items-center justify-center"
-          variants={variant}
-          initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
         >
-          <div className="text-center tracking--2">
-            <ScrollReveal
-              as="p"
-              containerClassName="font-light leading-snug md:max-w-6xl text-fluid-caption md:text-fluid-body lg:text-fluid-h3"
+          <FadeUp className="text-center tracking-para">
+            <p className="font-light leading-snug md:max-w-6xl text-fluid-caption md:text-fluid-body lg:text-fluid-h3"
             >
-              Accqrate CRM was meticulously designed to solve these problems.
-              With its intelligent workflows, deep data insights, and seamless integrations,
-              it enables your team to focus on building relationships and closing deals,
+              Accqrate CRM was meticulously designed to solve <br className="md:hidden" /> these problems.
+              With its intelligent workflows, deep <br className="md:hidden" /> data insights, and seamless integrations,
+              it enables <br className="md:hidden" /> your team to focus on building relationships and closing <br className="md:hidden" /> deals,
               not on administrative tasks.
-            </ScrollReveal>
-          </div>
-        </motion.div>
+            </p>
+          </FadeUp>
+        </div>
       </section>
     </>
   );

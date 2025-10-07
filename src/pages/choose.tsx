@@ -6,6 +6,7 @@ import Skeleton from "../components/ui/skeleton";
 import { LoadingContext } from "../utils/LoadingContext";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import FadeUp from "../components/ui/FadeUp";
 
 const buttons: string[] = ["REQUEST A DEMO", "CONTACT SALES", "LEARN MORE"];
 
@@ -115,25 +116,22 @@ export default function Choose(): JSX.Element {
 
   return (
     <>
-      <motion.section
+      <section
         id="chooseSection"
         className="bg-[#F2F2F2] text-center font-sans min-h-full m-0 mt-12 md:mt-14 md:px-8 py-6 md:py-8 px-6 text-[#333333]"
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
       >
-        <motion.h2
-          className="text-fluid-h2 font-semibold pb-6 md:pb-8 tracking--5"
-          variants={fadeInLeft}
-        >
-          Why Choose <span className="text-[#7B1FA2]">Accqrate Retail?</span>
-        </motion.h2>
+        <FadeUp>
+          <h2
+            className="text-fluid-h2 font-semibold pb-6 md:pb-8 tracking-heading"
+          >
+            Why Choose <span className="text-[#7B1FA2]">Accqrate Retail?</span>
+          </h2>
+        </FadeUp>
 
-        <motion.div
-          className="flex flex-col gap-12 items-center md:flex-row md:justify-center md:items-center"
-          variants={fadeInLeft}
-          transition={{ delay: 0.2 }}
+        <div
+          className="flex flex-col gap-6 items-center md:flex-row md:justify-center md:items-center"
         >
-          <div className="relative inline-block max-w-[600px] md:max-w-[400px]">
+          <FadeUp className="relative inline-block max-w-[600px] md:max-w-[400px]">
             <Image
               src="/images/choose.svg"
               alt="Why Choose Accqrate Retail"
@@ -150,13 +148,13 @@ export default function Choose(): JSX.Element {
               className="absolute right-0 bottom-0 md:bottom-16 md:right-[-10px] w-[100px] h-auto pointer-events-none"
               loading="lazy"
             />
-          </div>
+          </FadeUp>
 
-          <div className="max-w-[600px] text-left md:max-w-[500px]">
+          <FadeUp className="max-w-[600px] text-left md:max-w-[500px]">
             <p className="text-black font-light text-fluid-h3 leading-tight lg:hidden">
-              <span className="font-semibold tracking--2">Compliance by design:</span>
+              <span className="font-semibold tracking-para">Compliance by design:</span>
             </p>
-            <p className="text-fluid-caption tracking--2 mt-3 lg:hidden">
+            <p className="text-fluid-caption tracking-para mt-6 lg:hidden">
               Stay ready for every regulation no last-minute changes.
             </p>
             <ol className="md:pl-4 md:pr-20 font-light tracking--2 mb-8 space-y-4 text-fluid-caption mt-3">
@@ -164,23 +162,19 @@ export default function Choose(): JSX.Element {
               <li>2. Future-proof scaling: Grow from single store POS to a full ERP suite, no re-implementation.</li>
               <li>3. Total control: See your data, operations, and compliance in real time.</li>
             </ol>
-          </div>
-        </motion.div>
-      </motion.section>
+          </FadeUp>
+        </div>
+      </section>
 
-      <motion.section
+      <section
         id="readySection"
-        className="my-12 md:my-14 md:px-8 px-6 text-center min-h-full text-[#333333] mt-8"
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
+        className="my-12 md:my-14 md:px-8 px-6 text-center min-h-full text-[#333333] mt-[48px]"
       >
-        <motion.h2 className="font-semibold text-fluid-h2" variants={fadeInRight}>
-          Ready to accelerate your retail business?
-        </motion.h2>
-        <motion.div
-          className="flex flex-col md:flex-row md:max-w-[700px] mx-auto justify-center gap-5 mt-8"
-          variants={fadeInRight}
-          transition={{ delay: 0.2 }}
+        <FadeUp className="font-normal tracking-heading text-[26px] md:text-fluid-h2">
+          Ready to accelerate your <br /> retail business?
+        </FadeUp>
+        <FadeUp
+          className="flex flex-col md:flex-row md:max-w-[700px] mx-auto justify-center gap-[15px] mt-8"
         >
           {buttons.map((label, idx) => (
             <motion.button
@@ -192,8 +186,8 @@ export default function Choose(): JSX.Element {
               {label}
             </motion.button>
           ))}
-        </motion.div>
-      </motion.section>
+        </FadeUp>
+      </section>
     </>
   );
 }

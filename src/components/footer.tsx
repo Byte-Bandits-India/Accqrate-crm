@@ -2,7 +2,8 @@
 
 import React, { useContext, useState, useEffect, JSX } from "react";
 import { LoadingContext } from "../utils/LoadingContext";
-import { Skeleton } from "../components/ui/skeleton";
+import { Skeleton } from "./ui/skeleton";
+import FadeUp from "./ui/FadeUp";
 
 interface Section {
   title: string;
@@ -130,17 +131,17 @@ export default function Footer(): JSX.Element {
       {showSections && (
         <div className="flex justify-between flex-nowrap max-w-[1400px] mx-auto px-4 py-10 text-black gap-8 overflow-x-auto">
           {sections.map((section, idx) => (
-            <div key={idx} className="flex flex-col">
+            <FadeUp key={idx} className="flex flex-col">
               <h3 className="font-bold mb-4 text-[16px] leading-6 whitespace-normal break-words">{section.title}</h3>
               {section.items.map((item, i) => (
                 <p key={i} className="mb-4 text-sm leading-5 text-gray-600 whitespace-normal break-words">{item}</p>
               ))}
-            </div>
+            </FadeUp>
           ))}
         </div>
       )}
 
-      <div>
+      <FadeUp>
         <div className="flex flex-wrap justify-center gap-3 my-4 mt-5 mx-auto">
           {socialLinks.map(({ href, src }, idx) => (
             <a key={idx} href={href} target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 hover:scale-110">
@@ -153,7 +154,7 @@ export default function Footer(): JSX.Element {
           © Copyright 2021 - 2025{" "}
           <span className="text-[#194BED] text-sm leading-6 font-medium">Accqrate</span>, All rights reserved.
         </div>
-      </div>
+      </FadeUp>
     </footer>
   );
 }

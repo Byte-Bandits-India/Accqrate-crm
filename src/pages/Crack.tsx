@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React, { FC } from "react";
-
-// ScrollReveal component to handle scroll-triggered animations
-import ScrollReveal from "../components/ui/ScrollReveal";
+import FadeUp from "../components/ui/FadeUp";
 
 interface ImageItem {
   src: string;
@@ -37,20 +35,18 @@ const Crack: FC = () => {
 
   return (
     <section className="bg-white text-center px-6 md:px-8 mt-12 md:mt-14 lg:mt-20 text-[#333333]">
-      <ScrollReveal
-        as="h2"
-        containerClassName="text-fluid-h2 max-w-[300px] sm:max-w-[800px] mx-auto mb-6 md:mb-8 text-[#333333] lg:mb-10 font-medium tracking--5"
-      >
-        Crack and <span className="text-[#7B1FA2]">Track Proposals</span> with Ease
-      </ScrollReveal>
+      <FadeUp>
+        <h2 className="text-fluid-h2 max-w-[300px] sm:max-w-[800px] mx-auto mb-6 md:mb-8 text-[#333333] lg:mb-10 font-medium tracking-heading"
+        >
+          Crack and <span className="text-[#7B1FA2]">Track Proposals</span> with Ease
+        </h2>
 
-      <ScrollReveal
-        as="p"
-        containerClassName="text-[#000000B2] leading-snug mb-6 md:mb-8 lg:mb-10 text-fluid-caption tracking--2 max-w-2xl mx-auto"
-      >
-        Managing proposals, quotes, and related documents can be time-consuming and prone to errors.
-        Accqrate CRM simplifies proposal management with features that streamline creation, tracking, and submission.
-      </ScrollReveal>
+        <p className="text-[#000000B2] leading-snug mb-6 md:mb-8 lg:mb-10 text-fluid-caption tracking-para max-w-2xl mx-auto"
+        >
+          Managing proposals, quotes, and related documents <br className="md:hidden" /> can be time-consuming and prone to errors.
+          Accqrate <br className="md:hidden" /> CRM simplifies proposal management with features <br className="md:hidden" /> that streamline creation, tracking, and submission.
+        </p>
+      </FadeUp>
 
       <div className="flex flex-col items-center relative mt-6 text-[#333333]">
         {/* Marquee Card */}

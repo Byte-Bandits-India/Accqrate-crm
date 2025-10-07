@@ -4,9 +4,9 @@ import { CustomImage } from "../components/CommonComponents";
 import { JSX, useContext } from "react";
 import { LoadingContext } from "../utils/LoadingContext";
 import Skeleton from "../components/ui/skeleton";
-import { motion } from "framer-motion";
 import ButtonGroup from "../components/ui/ButtonGroup";
 import React from "react";
+import FadeUp from "../components/ui/FadeUp";
 
 // BUTTON PROPS INTERFACE
 interface ButtonProps {
@@ -82,12 +82,12 @@ export default function Accqrate(): JSX.Element {
       <section
         className={`w-full px-24px md:px-[32px] flex flex-col items-center text-[#333333]`}
       >
-        <h2 className="text-center text-fluid-h1 leading-tight tracking--5 font-semibold  mt-82px">
+        <h2 className="text-center text-[36px] md:text-fluid-h1 leading-tight tracking-heading font-semibold  mt-82px">
           <span className="text-[#333333] ">Accqrate</span>{" "}
           <span className="text-[#7B1FA2] ">CRM</span>
         </h2>
 
-        <p className="text-center max-w-[300px] sm:max-w-[900px] text-fluid-h2  leading-tight tracking--2 font-light mt-32px">
+        <p className="text-center max-w-[300px] sm:max-w-[900px] text-[20px] md:text-fluid-h2  leading-tight tracking-para font-light mt-32px">
           Turn{" "}
           <span className="text-[#7B1FA2] font-medium text-fluid-h2">
             Every Lead
@@ -95,14 +95,14 @@ export default function Accqrate(): JSX.Element {
           into a Customer Effortlessly
         </p>
 
-        <p className="text-center text-fluid-body font-light tracking--2 leading-tight md:font-semibold mt-32px">
-          Empower Your Sales with Intelligent Lead Management & Conversion
+        <p className="text-center text-[14px] md:text-fluid-body font-light tracking-para leading-tight md:font-semibold mt-32px">
+          Empower Your Sales with Intelligent Lead <br /> Management & Conversion
         </p>
 
-        <p className=" max-w-[700px] text-center text-fluid-caption tracking--2 font-normal text-gray-400 mt-16px md:mt-[20px]">
-          Accqrate CRM is not just a tool; it’s the heart of your sales engine.
-          Powered by automation and real-time analytics, Accqrate CRM transforms
-          your sales process making it smarter, faster, and more predictable.
+        <p className=" max-w-[700px] text-center text-fluid-caption tracking-para font-normal text-gray-400 mt-16px md:mt-[20px]">
+          Accqrate CRM is not just a tool; it’s the heart of your <br className="md:hidden" /> sales engine.
+          Powered by automation and real-time <br className="md:hidden" /> analytics, Accqrate CRM transforms
+          your sales process <br className="md:hidden" /> making it smarter, faster, and more predictable.
         </p>
 
         <div className="flex justify-center">
@@ -127,7 +127,7 @@ export default function Accqrate(): JSX.Element {
       </section>
 
       {/* DASHBOARD SECTION */}
-      <section className="w-full flex items-center justify-center box-border px-24px md:px-[32px]">
+      <section className="w-full flex items-center justify-center box-border px-24px md:px-[32px] mt-8">
         <div className="relative w-full max-w-[1200px] overflow-visible">
           <video
             src="/videos/accqratedashboard.mp4"
@@ -146,33 +146,25 @@ export default function Accqrate(): JSX.Element {
       <section className={sectionClasses}>
         <div className={containerClasses}>
           {/* TEXT */}
-          <motion.div
+          <FadeUp
             className="flex flex-col justify-center flex-1 text-[#333333]"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-fluid-h2 font-semibold text-[#8A39AC] tracking--2">
+            <h2 className="text-[20px] md:text-fluid-h2 font-semibold text-[#8A39AC] tracking-heading">
               Built-In{" "}
-              <span className="text-[#8A39AC] font-semibold tracking--2">
+              <span className="text-[#8A39AC] font-semibold">
                 E-Invoicing Compliance
               </span>
             </h2>
-            <p className=" mx-auto mt-32px text-fluid-h3 md:max-w-[500px]  sm:text-base tracking--2 font-normal">
+            <p className=" mx-auto mt-32px text-[16px] md:text-fluid-h3 sm:text-base tracking-para font-normal">
               <span className="font-semibold">100% ZATCA</span> phase 2
-              compliance: Issue e-invoice receipts with every sale, no extra
+              compliance: Issue e-invoice receipts with <br className="hidden md:block" /> every sale, no extra
               fees
             </p>
-          </motion.div>
+          </FadeUp>
 
           {/* IMAGE */}
-          <motion.div
+          <FadeUp
             className="sm:flex sm:justify-center w-auto"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
           >
             <CustomImage
               src="/images/zatak.svg"
@@ -181,7 +173,7 @@ export default function Accqrate(): JSX.Element {
               height="350"
               className="h-[200px] md:h-[250px]"
             />
-          </motion.div>
+          </FadeUp>
         </div>
       </section>
     </>

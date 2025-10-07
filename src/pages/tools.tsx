@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect, FC } from "react";
 import Skeleton from "../components/ui/skeleton";
 import { LoadingContext } from "../utils/LoadingContext";
 import { motion, easeOut } from "framer-motion";
-import ScrollReveal from "../components/ui/ScrollReveal";
+import FadeUp from "../components/ui/FadeUp";
 
 interface Section {
   title: string;
@@ -105,47 +105,39 @@ const Tools: FC = () => {
   ];
 
   return (
-    <motion.section
+    <section
       id="toolsSection"
       className="bg-white mt-48px md:mt-[56px] lg:mt-[80px] px-24px md:px-[32px] max-w-[1200px] mx-auto text-[#333333]"
-      variants={containerVariant}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
     >
-      <ScrollReveal
-        as="h2"
-        containerClassName="text-center text-fluid-h2 font-medium tracking--5 mb-[24px] md:mb-[32px] lg:mb-[40px]"
-      >
-        Actionable Insights at{" "}
-        <span className="text-[#7B1FA2] font-medium">Your Fingertips</span>
-      </ScrollReveal>
+      <FadeUp>
+        <h2 className="text-center text-fluid-h2 font-medium tracking-heading mb-[24px] md:mb-[32px] lg:mb-[40px]"
+        >
+          Actionable Insights at{" "}
+          <span className="text-[#7B1FA2] font-medium">Your Fingertips</span>
+        </h2>
 
-      <ScrollReveal
-        as="p"
-        containerClassName="text-center text-[#000000B2] tracking--2 text-fluid-caption 
+        <p className="text-center text-[#000000B2] tracking-para text-fluid-caption 
           max-w-lg leading-tight mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px] 
           md:max-w-[600px] lg:max-w-[800px]"
-      >
-        With Accqrate CRM, you gain real-time insights into your sales
-        pipeline and lead conversion metrics, allowing you to make informed
-        decisions and optimize your strategy quickly.
-      </ScrollReveal>
+        >
+          With Accqrate CRM, you gain real-time insights into <br className="md:hidden" /> your sales
+          pipeline and lead conversion metrics, <br className="md:hidden" /> allowing you to make informed
+          decisions and optimize <br className="md:hidden" /> your strategy quickly.
+        </p>
+      </FadeUp>
 
       {sections.map((section, idx) => (
-        <motion.div
+        <div
           key={idx}
           className="flex flex-col lg:flex-row lg:items-start gap-[24px] mt-[30px] md:mt-[40px] lg:mt-[56px] tracking--5"
-          initial={{ x: -100, opacity: 0 }}
-          animate={isVisible ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: idx * 0.2, ease: easeOut }}
         >
-          <div className="flex-1">
-            <h3 className="text-[#7B1FA2] font-semibold tracking--5 text-fluid-h3">
+          <FadeUp className="flex-1">
+            <h3 className="text-[#7B1FA2] font-semibold tracking-heading text-fluid-h3">
               {section.title}
             </h3>
-            <p className="text-fluid-body leading-tight tracking--2">{section.text}</p>
-          </div>
-          <div className="flex-1 flex justify-center">
+            <p className="text-fluid-body leading-tight tracking-para mt-[16px]">{section.text}</p>
+          </FadeUp>
+          <FadeUp className="flex-1 flex justify-center">
             <video
               src={section.video}
               muted
@@ -154,10 +146,10 @@ const Tools: FC = () => {
               playsInline
               className="w-full max-w-md rounded-lg"
             />
-          </div>
-        </motion.div>
+          </FadeUp>
+        </div>
       ))}
-    </motion.section>
+    </section>
   );
 };
 
