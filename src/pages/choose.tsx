@@ -124,7 +124,7 @@ export default function Choose(): JSX.Element {
           <h2
             className="text-fluid-h2 font-semibold pb-6 md:pb-8 tracking-heading"
           >
-            Why Choose <span className="text-[#7B1FA2]">Accqrate Retail?</span>
+            Why Choose <span className="text-[#7B1FA2]">Accqrate CRM?</span>
           </h2>
         </FadeUp>
 
@@ -134,7 +134,7 @@ export default function Choose(): JSX.Element {
           <FadeUp className="relative inline-block max-w-[600px] md:max-w-[400px]">
             <Image
               src="/images/choose.svg"
-              alt="Why Choose Accqrate Retail"
+              alt="Why Choose Accqrate CRM"
               width={700}
               height={300}
               className="w-full h-auto md:h-[450px] lg:h-[350px] block"
