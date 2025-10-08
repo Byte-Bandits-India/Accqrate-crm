@@ -145,12 +145,12 @@ const Smart: FC = () => {
           <FadeUp className="mt-6">
             <div
               className="bg-gradient-to-r from-[#E6E6E6] to-[#C8C8C8] rounded-lg mx-auto
-              p-6 sm:p-6 md:max-w-5xl
+              p-6 sm:p-6 md:max-w-[1062px]
               h-auto
               flex flex-col items-center justify-center"
             >
               <div className="max-w-[800px] mx-auto w-full">
-                <p className="text-fluid-small font-normal tracking-para text-[#333333] md:leading-10 text-left md:text-left">
+                <p className="text-fluid-small font-normal tracking-para text-[#333333] text-left md:text-left">
                   Accqrate CRM was meticulously designed to solve these problems. With its intelligent workflows, deep data insights, and seamless integrations, it enables your team to focus on building relationships and closing deals, not on administrative tasks.
                 </p>
               </div>
