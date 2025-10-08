@@ -239,7 +239,7 @@ export default function Capture(): JSX.Element {
                 <p className="md:hidden text-left tracking--2 leading-snug text-fluid-h3 text-[#7B1FA2] font-light">
                   {feature.text} <br />
                 </p>
-                <p className="text-gray-700 text-left mt-[16px] tracking-para text-fluid-caption font-normal">
+                <p className="text-gray-700 text-left mt-[16px] tracking-para text-fluid-body font-normal">
                   {feature.desc}
                 </p>
               </FadeUp>

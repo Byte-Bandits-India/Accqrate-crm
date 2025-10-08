@@ -70,7 +70,7 @@ const Crack: FC = () => {
         {videoCards.map((card, idx) => (
           <div
             key={idx}
-            className="sticky h-[300px] md:h-[450px] mt-6 border border-gray-400 top-10 bg-white rounded-2xl shadow-xl p-6 max-w-4xl w-full"
+            className="sticky h-[300px] md:h-[450px] mt-6 border border-gray-400 top-10 md:top-20 bg-white rounded-2xl shadow-xl p-6 max-w-4xl w-full"
             style={{ zIndex: 20 + idx }}
           >
             <div className="text-fluid-h3 font-bold text-[#C2185B] text-center mb-5">{card.title}</div>
