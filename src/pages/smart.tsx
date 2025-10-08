@@ -113,7 +113,7 @@ const Smart: FC = () => {
           A Smart, Scalable Solution <br className="md:hidden" /> for <span className="text-[#7B1FA2]"> Every Sales Team </span>
         </h2>
 
-        <p className="text-center text-[14px] md:text-fluid-caption px-6 md:px-8 font-light tracking-para"
+        <p className="text-center text-fluid-small lg:text-[16px text-[#737373] px-6 md:px-8 lg:font-medium tracking-para"
         >
           Every sales team faces common obstacles:
         </p>
@@ -141,14 +141,20 @@ const Smart: FC = () => {
         <div
           className="flex items-center justify-center"
         >
-          <FadeUp className="text-center tracking-para">
-            <p className="font-light leading-snug md:max-w-6xl text-fluid-caption md:text-fluid-body lg:text-fluid-h3"
+          {/* Testimonial Section */}
+          <FadeUp className="mt-6">
+            <div
+              className="bg-gradient-to-r from-[#E6E6E6] to-[#C8C8C8] rounded-lg mx-auto
+              p-6 sm:p-6 md:max-w-5xl
+              h-auto
+              flex flex-col items-center justify-center"
             >
-              Accqrate CRM was meticulously designed to solve <br className="md:hidden" /> these problems.
-              With its intelligent workflows, deep <br className="md:hidden" /> data insights, and seamless integrations,
-              it enables <br className="md:hidden" /> your team to focus on building relationships and closing <br className="md:hidden" /> deals,
-              not on administrative tasks.
-            </p>
+              <div className="max-w-[800px] mx-auto w-full">
+                <p className="text-fluid-small font-normal tracking-para text-[#333333] md:leading-10 text-left md:text-left">
+                  Accqrate CRM was meticulously designed to solve these problems. With its intelligent workflows, deep data insights, and seamless integrations, it enables your team to focus on building relationships and closing deals, not on administrative tasks.
+                </p>
+              </div>
+            </div>
           </FadeUp>
         </div>
       </section>

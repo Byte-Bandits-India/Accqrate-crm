@@ -41,7 +41,7 @@ const Crack: FC = () => {
           Crack and <span className="text-[#7B1FA2]">Track Proposals</span> with Ease
         </h2>
 
-        <p className="text-[#000000B2] leading-snug mb-6 md:mb-8 lg:mb-10 text-fluid-caption tracking-para max-w-2xl mx-auto"
+        <p className="text-[#000000B2] leading-snug mb-6 md:mb-8 lg:mb-10 text-fluid-small tracking-para max-w-2xl mx-auto"
         >
           Managing proposals, quotes, and related documents <br className="md:hidden" /> can be time-consuming and prone to errors.
           Accqrate <br className="md:hidden" /> CRM simplifies proposal management with features <br className="md:hidden" /> that streamline creation, tracking, and submission.

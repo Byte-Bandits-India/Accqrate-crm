@@ -116,7 +116,7 @@ const Tools: FC = () => {
           <span className="text-[#7B1FA2] font-medium">Your Fingertips</span>
         </h2>
 
-        <p className="text-center text-[#000000B2] tracking-para text-fluid-caption 
+        <p className="text-center text-[#000000B2] tracking-para text-fluid-small 
           max-w-lg leading-tight mx-auto mb-[24px] md:mb-[32px] lg:mb-[40px] 
           md:max-w-[600px] lg:max-w-[800px]"
         >

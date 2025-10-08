@@ -82,24 +82,24 @@ export default function Accqrate(): JSX.Element {
       <section
         className={`w-full px-24px md:px-[32px] flex flex-col items-center text-[#333333]`}
       >
-        <h2 className="text-center text-[36px] md:text-fluid-h1 leading-tight tracking-heading font-semibold  mt-82px">
+        <h2 className="text-center text-fluid-h1 leading-tight tracking-heading font-medium  mt-82px">
           <span className="text-[#333333] ">Accqrate</span>{" "}
           <span className="text-[#7B1FA2] ">CRM</span>
         </h2>
 
-        <p className="text-center max-w-[300px] sm:max-w-[900px] text-[20px] md:text-fluid-h2  leading-tight tracking-para font-light mt-32px">
+        <p className="text-center max-w-[300px] sm:max-w-[900px] text-fluid-h3  leading-tight tracking-para font-medium mt-32px">
           Turn{" "}
-          <span className="text-[#7B1FA2] font-medium text-fluid-h2">
+          <span className="text-[#7B1FA2]">
             Every Lead
           </span>{" "}
-          into a Customer Effortlessly
+          into a <br className="md:hidden" /> Customer Effortlessly
         </p>
 
-        <p className="text-center text-[14px] md:text-fluid-body font-light tracking-para leading-tight md:font-semibold mt-32px">
+        <p className="text-center text-fluid-small md:text-fluid-body tracking-para leading-tight font-medium mt-32px">
           Empower Your Sales with Intelligent Lead <br /> Management & Conversion
         </p>
 
-        <p className=" max-w-[700px] text-center text-fluid-caption tracking-para font-normal text-gray-400 mt-16px md:mt-[20px]">
+        <p className=" max-w-[700px] text-center text-fluid-small md:text-fluid-body tracking-para font-normal text-gray-400 mt-16px md:mt-[20px]">
           Accqrate CRM is not just a tool; it’s the heart of your <br className="md:hidden" /> sales engine.
           Powered by automation and real-time <br className="md:hidden" /> analytics, Accqrate CRM transforms
           your sales process <br className="md:hidden" /> making it smarter, faster, and more predictable.
@@ -149,7 +149,7 @@ export default function Accqrate(): JSX.Element {
           <FadeUp
             className="flex flex-col justify-center flex-1 text-[#333333]"
           >
-            <h2 className="text-[20px] md:text-fluid-h2 font-semibold text-[#8A39AC] tracking-heading">
+            <h2 className="text-fluid-h3 font-semibold text-[#8A39AC] tracking-heading">
               Built-In{" "}
               <span className="text-[#8A39AC] font-semibold">
                 E-Invoicing Compliance
